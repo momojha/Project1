@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>color game</title>
+	
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="ka15.css">
+<style>
+.main {
+  margin: auto;
+  
+  border: 3px solid #73AD21;
+  padding: 0px;
+  height: 50%;
+   width: 60%;
+   padding: 0px;
+   margin: 20% 20%;
+
+}
+.center {
+  margin: auto;
+  border: 3px solid black;
+  height: auto;
+   width: auto;
+   margin: 10% 10%;
+   display:inline-block;
+    float: center;
+   
+}
+.topcorner1{
+   position:relative;
+   top:0;
+   right:0;
+   background-color: black;
+   height: 20%;
+   width: 20%;
+   display: inline-block;
+    float: left;
+  }
+ .topcorner2{
+   position:relative;
+   top:0;
+   left:0;
+   background-color: lightblue;
+     height: 20%;
+   width: 20%;
+   display: inline-block;
+    float: right;
+ 
+  }
+ .topcorner3{
+   position:relative;
+   bottom:0;
+   right:0;
+   background-color: lightblue;
+     height: 30%;
+   width: 20%;
+     display: inline-block;
+    float: left;
+  }
+ .topcorner4{
+   position:relative;
+   bottom:0;
+   left:0;
+   background-color: lightblue;
+     height: 20%;
+   width: 20%;
+   display: inline-block;
+   margin-left: 60%;
+    
+  }
+  .p1{
+  	color: white;
+  	background-color: black;
+  }
+</style>
+</head>
+<body>
+
+<div class="main" style="border-style: solid;">
+	<div class="topcorner1 p1" >hello </div>
+	<div class="topcorner2 p1" >hello</div>
+	<div class="center">
+		<input type="text" id="fname" name="fname" style="border-color: white;"><br><br>
+	</div>
+	<div class="topcorner3 p1" > hello</div>
+	<div class="topcorner4 p1" >hello</div>
+</div>
+
+
+
+
+
+
+<script src="https://code.jquery.com/jquery-2.1.4.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+  <script type="text/javascript" src = "ka15.js"></script>
+  <script type="text/javascript">
+  	var m = document.getElementsByClassName("p1");
+  	var e = document.getElementById("fname");
+    e.addEventListener("keyup", function(){
+	var h = document.getElementById("fname").value;
+	m[0].innerHTML = h;
+    m[1].innerHTML = h;
+	m[2].innerHTML = h;
+	m[3].innerHTML = h;
+
+
+    console.log(h);
+});
+  </script>
+</body>
+</html>

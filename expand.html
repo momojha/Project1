@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>color game</title>
+	
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="ka15.css">
+<style>
+
+
+
+.topcorner1{
+   position:relative;
+   
+   right:0;
+   background-color: yellow;
+   height: 20%;
+   width: 20%;
+   
+  }
+
+
+ 
+</style>
+</head>
+<body>
+
+
+
+<input type="number" id="fname" name="fname"><br><br>
+<button type="button"  class="button">Click Me!</button>
+<div class="topcorner1 p1" > </div>
+
+
+<script src="https://code.jquery.com/jquery-2.1.4.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+  <script type="text/javascript" src = "ka15.js"></script>
+  <script type="text/javascript">
+  var nc = document.querySelector(".submit1");
+
+
+
+
+var nc = document.querySelector(".button");
+nc.addEventListener("click", function(){
+console.log("hello");
+var iDiv = document.createElement('div');
+iDiv.id = 'block';
+iDiv.className = 'block';
+var innerDiv = document.createElement('p');
+innerDiv.className = 'block-2';
+iDiv.appendChild(innerDiv);
+innerDiv.innerHTML = "hello"
+document.getElementsByTagName('body')[0].appendChild(iDiv);
+var button1 = document.createElement('button');
+button1.innerHTML = "EDIT"
+innerDiv.appendChild(button1);
+button1.addEventListener("click", function(){
+var input = document.createElement('input');
+innerDiv.appendChild(input);
+var button2 = document.createElement('button');
+innerDiv.appendChild(button2);
+button2.innerHTML = "SAVE"
+button2.addEventListener("click", function(){
+var t = input.value; 
+innerDiv.innerHTML = t;
+ console.log(t);
+});
+
+
+});
+});
+
+  </script>
+</body>
+</html>
