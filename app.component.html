@@ -1,0 +1,13 @@
+<hello name="{{ name }}"></hello>
+<p>
+  Start editing to see some magic happen :)
+</p>
+<!-- app.component.html -->
+<form name="sample-form" (ngSubmit)="submit()" #f="ngForm">
+ <international-phone-number [(ngModel)]="model.phone_number" placeholder="Enter phone number" [maxlength]="20" [defaultCountry]="'sg'" [required]="true" #phoneNumber="ngModel" name="phone_number" [allowedCountries]="['sg']"></international-phone-number>
+
+  <div *ngIf="f.submitted && !phoneNumber.valid" class="help-block">Phone number is required and should be valid</div>
+  <button type="submit">Submit</button>
+</form>
+
+{{ model | json }}
